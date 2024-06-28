@@ -1,0 +1,35 @@
+﻿@using VehicleRentalWeb.Models
+@model IEnumerable<Vehicle>
+
+
+@{
+    ViewData["Title"] = "Vehicle List";
+}
+
+<h1>Product List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Vehicle Id</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Rental Price</th>
+            <th>AvailabilityStatus</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vehicle in Model)
+        {
+            <tr>
+                <td>@vehicle.VehicleId</td>
+                <td>@vehicle.Make</td>
+                <td>@vehicle.Model</td>
+                <td>@vehicle.Year</td>
+                <td>@vehicle.RentalPrice</td>
+                <td>@vehicle.AvailabilityStatus</td>
+            </tr>
+        }
+    </tbody>
+</table>
